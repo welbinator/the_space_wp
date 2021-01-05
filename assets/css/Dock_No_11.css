@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Dock No. 11';
+	src: url(../../assets/fonts/hinted-DOCK11-Heavy.woff2) format('woff2'),
+	url(../../assets/fonts/hinted-DOCK11-Heavy.woff) format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
