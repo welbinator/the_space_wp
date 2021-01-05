@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-8">
-                <div class="floating-image-container"><img class="img-fluid d-none d-lg-block floating-image" src="<?php echo get_template_directory_uri() ?>/assets/img/whole-image.png"></div>
+                <div class="floating-image-container"><img class="img-fluid d-none d-lg-block floating-image" src="<?php echo wp_get_attachment_url(get_theme_mod('hero-image')) ?>"></div>
             </div>
         </div>
     </div><img class="bottom-triangle" src="<?php echo get_template_directory_uri() ?>/assets/img/bottom-triangle.svg">
