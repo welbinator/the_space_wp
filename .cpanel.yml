@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/escape/public_html/wp-content/themes/the-space-coworking/
+    - /bin/cp -R * $DEPLOYPATH
