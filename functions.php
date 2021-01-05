@@ -157,7 +157,7 @@ function the_space_coworking_scripts() {
 
 	
 
-	wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), _S_VERSION, true );
+	// wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), _S_VERSION, true );
 
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array(), _S_VERSION, true );
 
