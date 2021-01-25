@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-8">
-                <div class="floating-image-container"><img class="img-fluid d-none d-lg-block floating-image" src="<?php echo wp_get_attachment_url(get_theme_mod('hero-image')) ?>"></div>
+                <div id="scene" class="floating-image-container"><img data-depth="0.4" class="img-fluid d-none d-lg-block floating-image" src="<?php echo wp_get_attachment_url(get_theme_mod('hero-image')) ?>"></div>
             </div>
         </div>
     </div><img class="bottom-triangle" src="<?php echo get_template_directory_uri() ?>/assets/img/bottom-triangle.svg">
@@ -240,7 +240,8 @@
                             <a class="social-card-icon" href="https://rinajensen.com" target="_blank"><i class="fas fa-globe"></i></a>
                             <a class="social-card-icon" href="https://www.facebook.com/pg/RinaLJensen" target="_blank"><i class="fab fa-facebook"></i></a>
                             <a class="social-card-icon" href="https://instagram.com/RinaLJensen" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="social-card-icon" href="https://linkedin.com/in/RinaJensen" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+                            <a class="social-card-icon" href="https://linkedin.com/in/RinaJensen" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,7 +262,8 @@
                             <a class="social-card-icon" href="https://www.facebook.com/herringbonefreelance/" target="_blank"><i class="fab fa-facebook"></i></a>
                             <!-- <a class="social-card-icon" href="#"><i class="fab fa-twitter"></i></a> -->
                             <a class="social-card-icon" href="https://www.instagram.com/herringbonefreelance/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="social-card-icon" href="https://www.linkedin.com/in/jennie-morton-freelance-engineering-writer/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+                            <a class="social-card-icon" href="https://www.linkedin.com/in/jennie-morton-freelance-engineering-writer/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,7 +304,8 @@
                             <a class="social-card-icon" href="https://www.facebook.com/kendraaarhus" target="_blank"><i class="fab fa-facebook"></i></a>
                             <!-- <a class="social-card-icon" href="#"><i class="fab fa-twitter"></i></a> -->
                             <a class="social-card-icon" href="https://www.instagram.com/kendraarhus" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a class="social-card-icon" href="https://www.linkedin.com/in/Kendraaarhus" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+                            <a class="social-card-icon" href="https://www.linkedin.com/in/Kendraaarhus" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -338,7 +341,7 @@
         <div class="row align-items-center mb-3">
             <div class="col-12 col-md-4"><a class="text-center d-flex justify-content-xl-center align-items-xl-center mb-4" href="https://www.allegramarketingprint.com/locations/cedar_rapids-ia/" target="_blank"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/img/allegra_marketing_print_mail.png"></a></div>
             <div class="col-12 col-md-4"><a class="text-center d-flex justify-content-xl-center align-items-xl-center mb-4" href="https://www.officeevolution.com/locations/cedar-rapids" target="_blank"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/img/office_evolution.png"></a></div>
-                <div class="col-12 col-md-4"><a class="text-center d-flex justify-content-xl-center align-items-xl-center mb-4" href="https://iowabrewing.beer/" target="_blank"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/img/iowa_brewing_co.png"></a></div>
+            <div class="col-12 col-md-4"><a class="text-center d-flex justify-content-xl-center align-items-xl-center mb-4" href="https://iowabrewing.beer/" target="_blank"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/img/iowa_brewing_co.png"></a></div>
 
         </div>
         <div class="row align-items-center mb-3">

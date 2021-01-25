@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Space Coworking functions and definitions
  *
@@ -7,12 +8,12 @@
  * @package The_Space_Coworking
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define('_S_VERSION', '1.0.0');
 }
 
-if ( ! function_exists( 'the_space_coworking_setup' ) ) :
+if (!function_exists('the_space_coworking_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,17 +21,18 @@ if ( ! function_exists( 'the_space_coworking_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function the_space_coworking_setup() {
+	function the_space_coworking_setup()
+	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on The Space Coworking, use a find and replace
 		 * to change 'the-space-coworking' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'the-space-coworking', get_template_directory() . '/languages' );
+		load_theme_textdomain('the-space-coworking', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -38,19 +40,19 @@ if ( ! function_exists( 'the_space_coworking_setup' ) ) :
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'the-space-coworking' ),
+				'menu-1' => esc_html__('Primary', 'the-space-coworking'),
 			)
 		);
 
@@ -84,7 +86,7 @@ if ( ! function_exists( 'the_space_coworking_setup' ) ) :
 		);
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support('customize-selective-refresh-widgets');
 
 		/**
 		 * Add support for core custom logo.
@@ -102,7 +104,7 @@ if ( ! function_exists( 'the_space_coworking_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'the_space_coworking_setup' );
+add_action('after_setup_theme', 'the_space_coworking_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -111,22 +113,24 @@ add_action( 'after_setup_theme', 'the_space_coworking_setup' );
  *
  * @global int $content_width
  */
-function the_space_coworking_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'the_space_coworking_content_width', 640 );
+function the_space_coworking_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('the_space_coworking_content_width', 640);
 }
-add_action( 'after_setup_theme', 'the_space_coworking_content_width', 0 );
+add_action('after_setup_theme', 'the_space_coworking_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function the_space_coworking_widgets_init() {
+function the_space_coworking_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'the-space-coworking' ),
+			'name'          => esc_html__('Sidebar', 'the-space-coworking'),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'the-space-coworking' ),
+			'description'   => esc_html__('Add widgets here.', 'the-space-coworking'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -134,44 +138,50 @@ function the_space_coworking_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'the_space_coworking_widgets_init' );
+add_action('widgets_init', 'the_space_coworking_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function the_space_coworking_scripts() {
+function the_space_coworking_scripts()
+{
 
-	
-	
-	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(), _S_VERSION );
-	wp_style_add_data( 'bootstrap-style', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'dock-no-11', get_template_directory_uri() . '/assets/css/Dock_No_11.css', array(), _S_VERSION );
-	wp_style_add_data( 'dock-no-11', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'proxima-nova', get_template_directory_uri() . '/assets/css/ProximaNova.css', array(), _S_VERSION );
-	wp_style_add_data( 'proxima-nova', 'rtl', 'replace' );
+	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(), _S_VERSION);
+	wp_style_add_data('bootstrap-style', 'rtl', 'replace');
 
-	wp_enqueue_style( 'the-space-coworking-style', get_template_directory_uri() . '/sass/style.css', array(), _S_VERSION );
-	wp_style_add_data( 'the-space-coworking-style', 'rtl', 'replace' );
+	wp_enqueue_style('dock-no-11', get_template_directory_uri() . '/assets/css/Dock_No_11.css', array(), _S_VERSION);
+	wp_style_add_data('dock-no-11', 'rtl', 'replace');
 
-	
+	wp_enqueue_style('proxima-nova', get_template_directory_uri() . '/assets/css/ProximaNova.css', array(), _S_VERSION);
+	wp_style_add_data('proxima-nova', 'rtl', 'replace');
+
+	wp_enqueue_style('the-space-coworking-style', get_template_directory_uri() . '/sass/style.css', array(), _S_VERSION);
+	wp_style_add_data('the-space-coworking-style', 'rtl', 'replace');
+
+
 
 	// wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script('jquery');
 
-	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array(), _S_VERSION, true);
 
-	wp_enqueue_script( 'particles', get_template_directory_uri() . '/assets/js/particles.js', array(), _S_VERSION, true );
+	wp_enqueue_script('particles', get_template_directory_uri() . '/assets/js/particles.js', array(), _S_VERSION, true);
 
-	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.js', array(), _S_VERSION, true );
+	wp_register_script('parallax', 'https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js', null, null, true);
+	wp_enqueue_script('parallax');
+
+	wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/app.js', array(), _S_VERSION, true);
 
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+
+
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
-add_action( 'wp_enqueue_scripts', 'the_space_coworking_scripts' );
+add_action('wp_enqueue_scripts', 'the_space_coworking_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -197,65 +207,68 @@ new Custom_Customizer();
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
+if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
 // add class to anchor tags in menu
-add_filter( 'nav_menu_link_attributes', 'add_class_to_anchors', 10, 3 );
+add_filter('nav_menu_link_attributes', 'add_class_to_anchors', 10, 3);
 
-function add_class_to_anchors( $classes, $item, $args ) {
-    if(isset($args->add_link_class)) {
-        $classes['class'] = $args->add_link_class;
-    }
-    return $classes;
+function add_class_to_anchors($classes, $item, $args)
+{
+	if (isset($args->add_link_class)) {
+		$classes['class'] = $args->add_link_class;
+	}
+	return $classes;
 }
 
 // add classes to custom logo 
-add_filter( 'get_custom_logo', 'change_logo_class' );
+add_filter('get_custom_logo', 'change_logo_class');
 
 
-function change_logo_class( $html ) {
+function change_logo_class($html)
+{
 
-   
-    $html = str_replace( 'custom-logo-link', 'navbar-brand', $html );
 
-    return $html;
+	$html = str_replace('custom-logo-link', 'navbar-brand', $html);
+
+	return $html;
 }
 
 
 // Allow SVG
-add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
 
 	global $wp_version;
-	if ( $wp_version !== '4.7.1' ) {
-	   return $data;
+	if ($wp_version !== '4.7.1') {
+		return $data;
 	}
-  
-	$filetype = wp_check_filetype( $filename, $mimes );
-  
+
+	$filetype = wp_check_filetype($filename, $mimes);
+
 	return [
 		'ext'             => $filetype['ext'],
 		'type'            => $filetype['type'],
 		'proper_filename' => $data['proper_filename']
 	];
-  
-  }, 10, 4 );
-  
-  function cc_mime_types( $mimes ){
+}, 10, 4);
+
+function cc_mime_types($mimes)
+{
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
-  }
-  add_filter( 'upload_mimes', 'cc_mime_types' );
-  
-  function fix_svg() {
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+function fix_svg()
+{
 	echo '<style type="text/css">
 		  .attachment-266x266, .thumbnail img {
 			   width: 100% !important;
 			   height: auto !important;
 		  }
 		  </style>';
-  }
-  add_action( 'admin_head', 'fix_svg' );
+}
+add_action('admin_head', 'fix_svg');
 
-  remove_all_filters( 'wp_nav_menu_args' );
+remove_all_filters('wp_nav_menu_args');
